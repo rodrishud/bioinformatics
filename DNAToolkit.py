@@ -2,7 +2,6 @@ dnaNucleotides = ['A', 'C', 'G', 'T']
 
 dnaReverseComplement = {'A': 'T', 'T': 'A', 'G': 'C', 'C': 'G'}
 
-
 def validateSequence(sequence):
     tempSeq = sequence.upper()
     for nucleotide in tempSeq:
@@ -22,4 +21,3 @@ def transcription(sequence):
 def reverseComplement(sequence):
     return ''.join([dnaReverseComplement[nucleotide] for nucleotide in sequence])[::-1]
 
-    
