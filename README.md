@@ -9,3 +9,7 @@
 
 ## Exercícios de bioinformática do curso de Introdução à Computação para Bioinformática utilizando Python da UFMG (2021)
 - [x] [Pasta](https://github.com/rodrishud/bioinformatics/tree/master/bioinform%C3%A1tica_python%20(UFMG))
+
+## Exercício de sequenciamento da proteína Spike da variante ômicron do coronavírus Sars-Cov-2
+Realizado através do vídeo da profª Raquel Minardi, disponível em https://www.youtube.com/watch?v=BhZukRrFD0A&t=1597s&ab_channel=OnlineBioinfoBioinform%C3%A1tica
+- [x] [Em progresso](https://github.com/rodrishud/bioinformatics/tree/master/ex-omicron-seq)
