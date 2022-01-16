@@ -8,4 +8,4 @@
 
 
 ## Exercícios de bioinformática do curso de Introdução à Computação para Bioinformática utilizando Python da UFMG (2021)
-- [x] Pasta (https://github.com/rodrishud/bioinformatics/tree/master/bioinform%C3%A1tica_python%20(UFMG))
+- [x] [Pasta](https://github.com/rodrishud/bioinformatics/tree/master/bioinform%C3%A1tica_python%20(UFMG))
