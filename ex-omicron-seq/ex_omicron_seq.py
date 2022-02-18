@@ -26,7 +26,29 @@ def readMutations(fileName):
         linha = linha.rstrip()
         m = linha.split(', ')
         return m
-    
+
+# Definindo a função que faz as substituições -> será incorporada dentro da próxima função
+# Ela verifica se a posição informada corresponde ao aa1 informado. Caso seja diferente, ela não realiza nenhuma substituição.
+def substituicao(lista, aa1, aa2, pos):
+    if lista[pos] != aa1:
+        print(f'A pósição {pos} não contém o aminoácido {aa1}')
+        exit()
+    else:
+        lista[pos] = aa2
+
+# Definindo a função que verifica se as mutações são substituições
+# Com o for, a lista de mutações é percorrida;
+# A primeira etapa verifica se os três primeiros caracteres correspondem a uma deleção (del) ou uma inserção (ins);
+# Sendo uma substituição, então o primeiro valor é atribuído ao aminoácido 1 (original), o último valor ao aa2 (mutação), e a posição será o valor que está entre o índice 1 e o último.
+# E ao final, chama a função que realiza a substituição na nova lista
+def fazSubstituicao(lista, mut):
+    for i in mut:
+        if i[0:3] != 'del' and i[0:3] != 'ins':
+            aa1 = i[0]
+            aa2 = i[-1]
+            pos = int(i[1:-1])
+            substituicao(lista, aa1, aa2, pos)
+            
 
 ### Programa principal
 
@@ -39,8 +61,10 @@ if len(sys.argv) != 3:
 lista_original = readSequence(sys.argv[1])
 # Criando uma lista a partir da leitura do arquivo de mutações através da função readMutations() com o parâmetro que deverá ser inserido no terminal na posição [2]:
 lista_mutacoes = readMutations(sys.argv[2])
+# Criando uma cópia da lista original que será o sequenciamento com as novas mutações:
+lista_omicron = lista_original.copy()
 
+# Chamando a função que fará as substituições na nova lista
+fazSubstituicao(lista_omicron, lista_mutacoes)
 
-print(lista_original)
-print(f'O sequenciamento original possui {len(lista_original)} aminoácidos.')
-print(lista_mutacoes)
+print(lista_original[67], lista_omicron[67])
